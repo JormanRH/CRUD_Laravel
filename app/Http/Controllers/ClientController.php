@@ -42,6 +42,7 @@ class ClientController extends Controller
             'due' => 'required|gte:1'
         ]);
         $Client = Client::create($request->only('name', 'due', 'comments'));
+        
         //return 'Vamos a Guardar';
         Session::flash('Mensaje', 'Registro creado con éxito!');
         
@@ -67,6 +68,8 @@ class ClientController extends Controller
      */
     public function edit(Client $client)
     {
+        //echo  $client->comments;exit();
+        //var_dump($client);exit();
         return view('Client.form')->with('client', $client);
     }
 

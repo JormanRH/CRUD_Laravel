@@ -15,6 +15,7 @@
         <thead>
             <th>Nombre</th>
             <th>Saldo</th>
+            <th>Comentarios</th>
             <th>Acciones</th>
         </thead>
         <tbody>
@@ -22,6 +23,7 @@
                 <tr>
                     <td>{{$item->name}}</td>
                     <td>{{$item->due}}</td>
+                    <td>{{$item->comments}}</td>
                     <td>
                         <a href="{{ route('client.edit', $item) }}" class="btn btn-warning">Editar</a>
                         <form action="{{ route('client.destroy', $item) }}" method="post" class="d-inline">
@@ -34,7 +36,7 @@
                 </tr>
             @empty
             <tr>
-                <td colspan="3">No hay registros</td>
+                <td colspan="4">No hay registros</td>
             </tr>
             @endforelse
         
