@@ -44,9 +44,11 @@
             @enderror
         </div>
         @if (isset($client))
-            <button type="submit" class="btn-primary">Editar Cliente</button>
+            <button type="submit" class="btn btn-primary">Editar Cliente</button>
+            <a href="{{ route('client.store') }}" class="btn btn-danger">Cancelar</a>
         @else
-            <button type="submit" class="btn-primary">Crear Cliente</button>
+            <button type="submit" class="btn btn-primary">Crear Cliente</button>
+            <a href="{{ route('client.store') }}" class="btn btn-danger">Cancelar</a>
         @endif
 
         

@@ -82,9 +82,11 @@
 
         
         @if (isset($student))
-            <button type="submit" class="btn-primary">Editar Estudiante</button>
+            <button type="submit" class="btn btn-primary">Editar Estudiante</button>
+            <a href="{{ route('student.store') }}" class="btn btn-danger">Cancelar</a>
         @else
-            <button type="submit" class="btn-primary">Crear Estudiante</button>
+            <button type="submit" class="btn btn-primary">Crear Estudiante</button>
+            <a href="{{ route('student.store') }}" class="btn btn-danger">Cancelar</a>
         @endif
 
         
