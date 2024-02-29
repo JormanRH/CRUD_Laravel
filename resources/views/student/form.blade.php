@@ -3,7 +3,6 @@
 @section('content')
 <div class="container py-5 text-center">
     
-
     @if (isset($student))
         <h1>Editar Estudiante</h1>
     @else

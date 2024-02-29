@@ -2,7 +2,6 @@
 
 @section('content')
 <div class="container py-5 text-center">
-    
 
     @if (isset($client))
         <h1>Editar Cliente</h1>
